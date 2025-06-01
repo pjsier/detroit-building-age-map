@@ -69,7 +69,7 @@ const popupContent = (features) =>
     .map(
       ({ properties }) => `<p><strong>Address</strong> ${properties.address}</p>
     <p><strong>PIN</strong> ${properties.parcel_id}</p>
-    <p><strong>Year built</strong> ${properties.year_built}</p>`
+    <p><strong>Year built</strong> ${properties.year_built || "Not available"}</p>`
     )
     .join("")
 

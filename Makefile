@@ -13,7 +13,6 @@ tiles/raster/buildings/: input/buildings.geojson
 tiles/vector/buildings.pmtiles: tiles/vector/buildings.mbtiles
 	pmtiles convert $< $@
 
-# TODO: set ID
 tiles/vector/buildings.mbtiles: input/buildings.geojson
 	tippecanoe \
 		--simplification=10 \
@@ -25,7 +24,7 @@ tiles/vector/buildings.mbtiles: input/buildings.geojson
 		--grid-low-zooms \
 		--coalesce-smallest-as-needed \
 		--accumulate-attribute=age:mean \
-		--attribute-type=parcel_id:string \
+		--generate-ids \
 		--force \
 		-L buildings:$< -o $@
 

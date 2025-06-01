@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+dist
+input/*
+!input/.keep
+output/*
+!output/.keep
+.env
+tiles/**/*
+!tiles/raster/.keep
+!tiles/vector/.keep
+.venv

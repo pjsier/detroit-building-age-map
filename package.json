@@ -1,0 +1,61 @@
+{
+  "name": "detroit-building-age-map",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "mapshapercli": "node --max_old_space_size=8192 ./node_modules/.bin/mapshaper",
+    "render-tiles": "node ./scripts/render-tiles.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "^3.5.2",
+    "pmtiles": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@mapbox/sphericalmercator": "^2.0.1",
+    "@mapbox/tile-cover": "^3.0.2",
+    "@turf/turf": "^7.2.0",
+    "canvas": "^3.1.0",
+    "d3-color": "^3.1.0",
+    "d3-scale": "^4.0.2",
+    "eslint": "^8.52.0",
+    "eslint-plugin-import": "^2.29.0",
+    "mapshaper": "^0.6.102",
+    "prettier": "^3.0.3",
+    "prettier-eslint": "^16.1.1",
+    "rbush": "^4.0.1",
+    "sharp": "^0.34.2",
+    "vite": "^4.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "import"
+    ],
+    "parser": "@babel/eslint-parser",
+    "requireConfigFile": false,
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  }
+}
